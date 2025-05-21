@@ -1,10 +1,10 @@
 import React from 'react'
 import {View,Text, SafeAreaView} from 'react-native'
-import LoginStack from './src/Navigation/LoginStack/Loginstack';
+import RootNavigation from './src/Navigation/RootNavigation';
 
 const App=()=> {
   return (
-      <LoginStack/>
+  <RootNavigation/>
   );
 }
 
