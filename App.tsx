@@ -1,10 +1,10 @@
 import React from 'react'
 import {View,Text, SafeAreaView} from 'react-native'
-import Login from './src/screen/Login/Login';
+import LoginStack from './src/Navigation/LoginStack/Loginstack';
 
 const App=()=> {
   return (
-      <Login/>
+      <LoginStack/>
   );
 }
 
