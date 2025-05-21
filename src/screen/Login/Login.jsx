@@ -1,9 +1,11 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useRef, useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import PhoneInput from 'react-native-phone-number-input';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 function Login() {
+  const navigation = useNavigation();
   const phoneInput = useRef(null);
   const [phoneNumber, setPhoneNumber] = useState('');
 
@@ -45,7 +47,7 @@ function Login() {
         />
 
         {/* Send OTP Button */}
-        <TouchableOpacity style={styles.sendOtpButton}>
+        <TouchableOpacity onPress={()=>{navigation.navigate('otp')}} style={styles.sendOtpButton}>
           <Text style={styles.sendOtpText}>SEND OTP</Text>
         </TouchableOpacity>
 
